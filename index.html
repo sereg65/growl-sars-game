@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Growl SARS 2.0</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <canvas id="gameCanvas"></canvas>
+
+    <div id="menu" class="panel glass">
+      <div class="title-wrap">
+        <p class="kicker">Arena Survival</p>
+        <h1>Growl SARS 2.0</h1>
+      </div>
+
+      <div class="button-row">
+        <button id="startBtn">Start Run</button>
+        <button id="shopBtn">Weapon Shop</button>
+        <button id="giftBtn">Gifts</button>
+      </div>
+
+      <div class="stat-grid">
+        <div><span>Level</span><strong id="menuLevel">1</strong></div>
+        <div><span>Coins</span><strong id="menuCoins">250</strong></div>
+        <div><span>Score</span><strong id="menuScore">0</strong></div>
+        <div><span>Wave</span><strong id="menuWave">1</strong></div>
+      </div>
+    </div>
+
+    <div id="shopPanel" class="panel glass hidden">
+      <div class="panel-header">
+        <h2>Weapon Shop</h2>
+        <button class="close-btn" data-close="shopPanel">X</button>
+      </div>
+      <div id="shopList" class="shop-list"></div>
+      <div class="shop-upgrades">
+        <button id="upgradeDamage">+ Damage</button>
+        <button id="upgradeHealth">+ Health</button>
+        <button id="upgradeFireRate">+ Fire Rate</button>
+      </div>
+    </div>
+
+    <div id="giftPanel" class="panel glass hidden">
+      <div class="panel-header">
+        <h2>Rewards</h2>
+        <button class="close-btn" data-close="giftPanel">X</button>
+      </div>
+      <div class="gift-box">
+        <h3>Daily Gift</h3>
+        <p id="dailyStatus">Ready to claim</p>
+        <button id="dailyGiftBtn">Claim Daily</button>
+      </div>
+      <div class="gift-box">
+        <h3>Monthly Gift</h3>
+        <p id="monthlyStatus">Ready for premium drop</p>
+        <button id="monthlyGiftBtn">Claim Monthly</button>
+      </div>
+    </div>
+
+    <div id="hud" class="hidden">
+      <div class="hud-top">
+        <div class="hud-block"><span>Level</span><strong id="hudLevel">1</strong></div>
+        <div class="hud-block"><span>Wave</span><strong id="hudWave">1</strong></div>
+        <div class="hud-block"><span>Score</span><strong id="hudScore">0</strong></div>
+        <div class="hud-block"><span>Coins</span><strong id="hudCoins">0</strong></div>
+      </div>
+
+      <div class="hud-bottom">
+        <div class="hud-block wide">
+          <span>Health</span>
+          <div class="meter"><div id="healthBar"></div></div>
+        </div>
+        <div class="hud-block wide">
+          <span>Ammo</span>
+          <strong id="hudAmmo">30 / 30</strong>
+        </div>
+      </div>
+
+      <div id="weaponName" class="weapon-name">Pistol</div>
+      <div id="crosshair"></div>
+    </div>
+
+    <div id="message"></div>
+
+    <script type="module" src="./game-v2.js"></script>
+  </body>
+</html>
