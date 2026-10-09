@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Growl SARS 2.0</title>
+    <title>Growl SARS 4.0</title>
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
@@ -12,7 +12,19 @@
     <div id="menu" class="panel glass">
       <div class="title-wrap">
         <p class="kicker">Arena Survival</p>
-        <h1>Growl SARS 2.0</h1>
+        <h1>Growl SARS 4.0</h1>
+      </div>
+
+      <div class="mode-group">
+        <button class="mode-btn active" data-mode="survival">Survival</button>
+        <button class="mode-btn" data-mode="boss">Boss Rush</button>
+        <button class="mode-btn" data-mode="missions">Missions</button>
+      </div>
+
+      <div class="map-group">
+        <button class="map-btn active" data-map="Neon City">Neon City</button>
+        <button class="map-btn" data-map="Desert">Desert</button>
+        <button class="map-btn" data-map="Arctic">Arctic</button>
       </div>
 
       <div class="button-row">
@@ -26,6 +38,17 @@
         <div><span>Coins</span><strong id="menuCoins">250</strong></div>
         <div><span>Score</span><strong id="menuScore">0</strong></div>
         <div><span>Wave</span><strong id="menuWave">1</strong></div>
+      </div>
+
+      <div class="side-panel">
+        <div class="mini-card">
+          <span>Objective</span>
+          <strong id="objectiveText">Survive the arena</strong>
+        </div>
+        <div class="mini-card">
+          <span>Battle Pass</span>
+          <strong id="battlePassText">1 / 100</strong>
+        </div>
       </div>
     </div>
 
@@ -61,6 +84,7 @@
 
     <div id="hud" class="hidden">
       <div class="hud-top">
+        <div class="hud-block"><span>Mode</span><strong id="hudMode">Survival</strong></div>
         <div class="hud-block"><span>Level</span><strong id="hudLevel">1</strong></div>
         <div class="hud-block"><span>Wave</span><strong id="hudWave">1</strong></div>
         <div class="hud-block"><span>Score</span><strong id="hudScore">0</strong></div>
@@ -79,11 +103,12 @@
       </div>
 
       <div id="weaponName" class="weapon-name">Pistol</div>
+      <div id="objectiveHud" class="objective-hud">Objective: survive</div>
       <div id="crosshair"></div>
     </div>
 
     <div id="message"></div>
 
-    <script type="module" src="./game-v2.js"></script>
+    <script type="module" src="./game-v4.js"></script>
   </body>
 </html>
